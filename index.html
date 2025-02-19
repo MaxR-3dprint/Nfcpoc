@@ -38,7 +38,7 @@
         const userId = "user1"; // Hier kannst du die Benutzer-ID eingeben
 
         // Daten von Firestore abrufen
-        db.collection("users").doc(userId).get()
+        db.collection("user").doc(userId).get()
             .then((doc) => {
                 if (doc.exists) {
                     const userData = doc.data();
@@ -65,7 +65,7 @@
                     // Download-Link erstellen
                     const downloadLink = document.createElement("a");
                     downloadLink.href = vCardUrl;
-                    downloadLink.download = `${userData.name}.vcf`;
+                    downloadLink.download = `${userData.Name}.vcf`;
                     downloadLink.innerText = "Klicke hier, um deine vCard herunterzuladen";
 
                     // Download-Link auf der Webseite anzeigen
