@@ -35,10 +35,10 @@
         const db = firebase.firestore(app);
 
         // Die ID des Benutzers, den du abrufen möchtest (z.B. user123)
-        const userId = "user1"; // Hier kannst du die Benutzer-ID eingeben
+        const userId = "User1"; // Hier kannst du die Benutzer-ID eingeben
 
         // Daten von Firestore abrufen
-        db.collection("user").doc(userId).get()
+        db.collection("User").doc(userId).get()
             .then((doc) => {
                 if (doc.exists) {
                     const userData = doc.data();
